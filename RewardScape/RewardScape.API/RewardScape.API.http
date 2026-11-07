@@ -1,0 +1,6 @@
+@RewardScape.API_HostAddress = http://localhost:5274
+
+GET {{RewardScape.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
