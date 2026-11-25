@@ -30,6 +30,11 @@ public static class SeedData
             new Store { StoreId = 3, Name = "SpendWell Cape Town CBD", Region = "Cape Metro", IsActive = true },
             new Store { StoreId = OnlineStoreId, Name = "SpendWell Online", Region = "Online", IsActive = true });
 
+        modelBuilder.Entity<TravelProvider>().HasData(
+            new TravelProvider { TravelProviderId = 1, Name = "SkyBridge Air", Type = TravelType.Flight, IsActive = true },
+            new TravelProvider { TravelProviderId = 2, Name = "Coastal Stays", Type = TravelType.Hotel, IsActive = true },
+            new TravelProvider { TravelProviderId = 3, Name = "RoadReady Car Hire", Type = TravelType.CarHire, IsActive = true });
+
         // Every R10 of travel spend earns this many points (before tier multiplier)
         modelBuilder.Entity<TravelEarnRule>().HasData(
             new TravelEarnRule { TravelEarnRuleId = 1, Type = TravelType.Flight, PointsPerR10 = 2.0m },
