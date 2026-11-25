@@ -95,6 +95,7 @@ public static class SeedData
                 StartsAt = start, EndsAt = end, IsActive = true
             });
 
+
         await db.SaveChangesAsync();
     }
 
