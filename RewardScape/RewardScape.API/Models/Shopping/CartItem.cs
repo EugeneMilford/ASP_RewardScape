@@ -1,0 +1,19 @@
+namespace SpendWell.Api.Models;
+
+/// <summary>
+/// One product line in a cart. No price is stored: the cart always shows the current
+/// product price, and checkout charges the price at that moment.
+/// </summary>
+public class CartItem
+{
+    public int CartItemId { get; set; }
+
+    public int CartId { get; set; }
+    public Cart Cart { get; set; } = null!;
+
+    public int ProductId { get; set; }
+    public Product Product { get; set; } = null!;
+
+    public int Quantity { get; set; }
+    public DateTime AddedAt { get; set; } = DateTime.UtcNow;
+}
